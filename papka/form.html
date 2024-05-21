@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style form.css" rel="stylesheet">
+    <title>Валидация форм</title>
+</head>
+<body>
+
+  <p id="pRegistration">Регистрация</p>
+ <div class="forma">
+
+
+<form class="formaReg" name="myForm" onsubmit="return validateForm()" method="post">
+
+<label class="label">
+
+    Фамилия
+<!--<input id="surname" type="text" name="surname" pattern="^[А-ЯЁ-A-Z]{1}[а-яёА-ЯЁа-zA-Z\s-]{1,}$" required placeholder=" ">
+ name="surname" pattern="^([А-Я]{1}[а-яё]{1,}|[А-Я]{1}[а-яё]{1,}[-][А-Я]{1}[а-яё]{1,})$"-->
+ <input id="input" class="surname" type="text" name="surname" required placeholder=" ">
+
+ <p id="pSurname1">Введите фамилию</p>
+<p id="pSurname2">Неправильный формат фамилии</p>
+</label>
+<br>
+
+<label class="label">
+
+  Имя
+
+<!--<input id="name" type="text" name="name" minlength="2" maxlength="32" pattern="^[А-ЯЁ-A-Z]{1}[а-яёА-ЯЁа-zA-Z\s-]{1,}$" required placeholder=" ">
+-->
+<input id="input" class="name" type="text" name="name" minlength="2" maxlength="32" required placeholder=" ">
+<p id="pName1">Введите имя</p>
+<p id="pName2">Неправильный формат имени</p>
+</label>
+
+
+ <br>
+
+<label class="label">
+    Отчество
+
+<!--<input id="inp" type="text" name="patronymic" pattern="[а-яёА-ЯЁа-zA-Z]^[,]" required placeholder="Отчество">
+<input id="patronymic" type="text" pattern="^([А-Я]{1}[а-яё]{1,23}|[A-Z]{1}[a-z]{,})$" placeholder=" ">-->
+<input id="input" class="patronymic" type="text" placeholder=" ">
+<p id="pPatronymic">Неверный формат отчества</p>
+</label>
+<br>
+
+<label class="label">
+
+    Логин
+ <!--<input class="login" type="login" name="login" pattern="[а-яёА-ЯЁа-zA-Z\s-,.]{,}" required placeholder=" ">-->
+ <input id="input" class="login" type="login" name="login" required placeholder=" ">
+ <p id="pLogin1">Введите логин</p>
+ <p id="pLogin2">Неверный формат логина</p>
+</label>
+ <br>
+
+<label class="label">
+
+    Телефон
+ <!--<input class="phone" type="tel" name="phone" pattern="^[+][0-9]{11}$" required placeholder=" " value="+7">-->
+ <input id="input" class="phone" type="tel" name="phone" required placeholder="+71112223344">
+<p id="pPhone1">Введите номер телефона</p>
+<p id="pPhone2">Неверный формат номера<br>телефона</p>
+</label>
+<br>
+
+<label class="label">
+
+    Email
+
+<!--<input class="email" type="email" name="email" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required placeholder=" ">-->
+<input id="input" class="email" type="email" name="email" required placeholder=" ">
+<p id="pEmail1">Введите почту</p>
+<p id="pEmail2">Неверный формат почты</p>
+</label>
+<br>
+
+<label class="label">
+
+   Пароль
+
+<!--<input id="pass" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" name="password" minlength="6"  required placeholder=" ">
+-->
+<input id="input" class="pass" required placeholder=" ">
+<p id="pPassword1">Введите пароль</p>
+
+</label>
+<span id="spanPassword2">Неверный формат пароля. В пароле должно быть минимум 6 символов, должны быть заглавные и прописные буквы, числа</p></span>
+<br>
+
+<label class="label">
+
+    Подтвердите пароль
+
+<!--<input id="passR" type="password" minlength="6" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" name="password-repeate" minlength="6" required placeholder=" ">
+-->
+<input id="input" class="passR" type="password" required placeholder=" ">
+<p id="pPasswordRepete1">Введите пароль</p>
+<p id="pPasswordRepete2">Пароли не совпадают</p>
+</label>
+<br>
+
+<input class="sub" type="submit" onclick="Submit()">
+<br>
+
+</form>
+ </div>
+ <script src="script form1.js"></script>
+</body>
+
+</html>
